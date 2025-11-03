@@ -2,6 +2,8 @@
 
 Tento dokument popisuje, jak nastavit environment variables v Vercelu pro projekt Salon Fénix.
 
+> **Poznámka:** Pokud ještě nemáte projekt naimportovaný do Vercelu, nejprve postupujte podle [vercel-initial-setup.md](./vercel-initial-setup.md).
+
 ## Požadované Environment Variables
 
 Projekt potřebuje následující environment variables:

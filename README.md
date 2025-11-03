@@ -218,14 +218,20 @@ Projekt používá:
 
 Projekt je připraven pro deployment na Vercel pomocí GitHub Actions. Automatické nasazení se spustí při pushu do `dev` větve.
 
-#### Nastavení GitHub Actions
+#### První nastavení
 
-1. V GitHub repository nastavte následující secrets (Settings → Secrets and variables → Actions):
+**⚠️ Důležité:** Před použitím GitHub Actions musíte projekt naimportovat do Vercelu!
+
+1. **Naimportujte projekt do Vercelu** (viz [docs/vercel-initial-setup.md](docs/vercel-initial-setup.md)):
+   - Přes Vercel Dashboard nebo CLI
+   - Získejte `VERCEL_TOKEN`, `VERCEL_ORG_ID` a `VERCEL_PROJECT_ID`
+
+2. **Nastavte GitHub Secrets** (Settings → Secrets and variables → Actions):
    - `VERCEL_TOKEN` - Vercel token (Settings → Tokens v Vercelu)
    - `VERCEL_ORG_ID` - ID organizace v Vercelu
    - `VERCEL_PROJECT_ID` - ID projektu v Vercelu
 
-2. Nastavte environment variables v Vercelu (viz [docs/vercel-env-setup.md](docs/vercel-env-setup.md)):
+3. **Nastavte environment variables v Vercelu** (viz [docs/vercel-env-setup.md](docs/vercel-env-setup.md)):
    - `MAILERSEND_API_KEY`
    - `RECAPTCHA_SECRET_KEY`
    - `RECAPTCHA_SITE_KEY`
