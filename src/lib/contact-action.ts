@@ -21,8 +21,8 @@ export type ContactActionResult = {
 
 export const submitContactForm = async (formData: ContactFormData): Promise<ContactActionResult> => {
     try {
-        const sentFrom = new Sender('MS_2uJH7Q@test-3m5jgro15z0gdpyo.mlsender.net', 'Salon Fénix');
-        const recipients = [new Recipient('beemanik@gmail.com', 'Your Client')];
+        const sentFrom = new Sender(process.env.MAIL_FROM ?? '', 'Salon Fénix');
+        const recipients = [new Recipient(formData.email, 'Your Client')];
 
         const html = `
       <h2>Nová objednávka</h2>
