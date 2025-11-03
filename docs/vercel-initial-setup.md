@@ -20,7 +20,11 @@ Máte dvě možnosti:
    - **Build Command**: `pnpm build` (nebo `npm run build`)
    - **Output Directory**: `.next` (nechte výchozí)
    - **Install Command**: `pnpm install` (nebo `npm install`)
-8. Klikněte na **Deploy**
+8. **⚠️ DŮLEŽITÉ - Nastavení větví:**
+   - **Production Branch**: Nechte `main` (nebo změňte podle potřeby)
+   - Vercel automaticky nasazuje `main` jako production
+   - Ostatní větve (např. `dev`) budou nasazovány jako preview deployments
+9. Klikněte na **Deploy**
 
 ### Varianta B: Import přes Vercel CLI
 
@@ -98,7 +102,18 @@ Výstup bude vypadat takto:
    - Name: `VERCEL_PROJECT_ID`
    - Value: (Project ID z kroku 2.3)
 
-## Krok 4: Nastavení Environment Variables
+## Krok 4: Nastavení Production Branch (volitelné)
+
+Pokud chcete, aby `dev` větev byla nasazována místo `main`:
+
+1. V Vercel Dashboard přejděte do vašeho projektu
+2. Přejděte na **Settings** → **Git**
+3. V sekci **Production Branch** změňte branch z `main` na `dev` (nebo jinou větev)
+4. Uložte změny
+
+**Poznámka:** GitHub Actions workflow nasazuje `dev` větev jako preview deployment, takže toto nastavení není nutné, pokud chcete používat automatické preview deployments z GitHub Actions.
+
+## Krok 5: Nastavení Environment Variables
 
 Nastavte environment variables v Vercelu (viz [vercel-env-setup.md](./vercel-env-setup.md)):
 - `MAILERSEND_API_KEY`

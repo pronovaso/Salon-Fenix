@@ -225,6 +225,7 @@ Projekt je připraven pro deployment na Vercel pomocí GitHub Actions. Automatic
 1. **Naimportujte projekt do Vercelu** (viz [docs/vercel-initial-setup.md](docs/vercel-initial-setup.md)):
    - Přes Vercel Dashboard nebo CLI
    - Získejte `VERCEL_TOKEN`, `VERCEL_ORG_ID` a `VERCEL_PROJECT_ID`
+   - **Poznámka:** Vercel defaultně nasazuje `main` větev. Pro `dev` větev použijte GitHub Actions (viz [docs/vercel-branch-setup.md](docs/vercel-branch-setup.md))
 
 2. **Nastavte GitHub Secrets** (Settings → Secrets and variables → Actions):
    - `VERCEL_TOKEN` - Vercel token (Settings → Tokens v Vercelu)
