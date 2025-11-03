@@ -57,7 +57,31 @@ export const getEnvValue = async <T extends string | readonly string[]>(
         // Vytvoření nového requestu
         const promise = (async () => {
             try {
-                const origin = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000';
+                // Na serveru použijeme process.env přímo, na klientovi fetch přes API
+                if (typeof window === 'undefined') {
+                    // Server-side: použijeme process.env přímo
+                    const result = isEnvArray
+                        ? (envKey as string[]).reduce(
+                              (acc, key) => {
+                                  acc[key] = process.env[key];
+                                  return acc;
+                              },
+                              {} as Record<string, string | undefined>,
+                          )
+                        : process.env[envKey as string];
+
+                    // Uložení do cache
+                    envCache.set(cacheKey, {
+                        data: result,
+                        timestamp: now,
+                        ttl: options?.cacheTTL ?? 5 * 60 * 1000,
+                    });
+
+                    return result;
+                }
+
+                // Client-side: použijeme fetch přes API
+                const origin = window.location.origin;
                 const queryParams = isEnvArray
                     ? (envKey as string[]).map((key) => `env=${encodeURIComponent(key)}`).join('&')
                     : `env=${encodeURIComponent(envKey as string)}`;
