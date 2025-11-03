@@ -20,6 +20,8 @@ const RootLayout = async ({children, params}: Props) => {
     const reCaptchaCode = env.RECAPTCHA_SITE_KEY || '';
 
     const intl = await getIntl(locale as any);
+    // Get messages from intl instance
+    const messages = (await import(`../../lang/${locale}.json`)).default;
     const prefix = locale === 'cs' ? '' : `/${locale}`;
     const navigation = [
         {name: intl.formatMessage({id: 'navigation.home'}), href: prefix || '/'},
@@ -34,7 +36,7 @@ const RootLayout = async ({children, params}: Props) => {
     const langLabels = {cs: 'CZ', en: 'EN', de: 'DE'} as const;
 
     return (
-        <IntlProvider>
+        <IntlProvider messages={messages} locale={locale}>
             <GoogleReCaptchaProvider type="v2-checkbox" siteKey={reCaptchaCode} scriptProps={{nonce}}>
                 <StructuredData locale={locale} />
                 <Header locale={locale} navigation={navigation} brandName={brandName} openMenuLabel={openMenuLabel} langLabels={langLabels} />
