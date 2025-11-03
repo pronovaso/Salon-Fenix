@@ -3,7 +3,7 @@ import Header from '@common/Header/Header';
 import StructuredData from '@common/StructuredData/StructuredData';
 import {getEnvValueArray} from '@common/services/CommonService';
 import {IntlProvider} from '@lib/IntlProvider';
-import {getIntl} from '@lib/intl';
+import {getIntl, getMessages} from '@lib/intl';
 import {Metadata, Viewport} from 'next';
 import {headers} from 'next/headers';
 import {ReactNode} from 'react';
@@ -20,8 +20,8 @@ const RootLayout = async ({children, params}: Props) => {
     const reCaptchaCode = env.RECAPTCHA_SITE_KEY || '';
 
     const intl = await getIntl(locale as any);
-    // Get messages from intl instance
-    const messages = (await import(`../../lang/${locale}.json`)).default;
+    // Get messages for IntlProvider
+    const messages = await getMessages(locale as any);
     const prefix = locale === 'cs' ? '' : `/${locale}`;
     const navigation = [
         {name: intl.formatMessage({id: 'navigation.home'}), href: prefix || '/'},
