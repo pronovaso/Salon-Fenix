@@ -1,0 +1,62 @@
+{
+  "name": "Salon Fénix",
+  "short_name": "Salon Fénix",
+  "description": "Salon Fénix - profesionální kosmetické a masážní služby v Lipně nad Vltavou",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1200E0",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "cs-CZ",
+  "dir": "ltr",
+  "categories": ["beauty", "health", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/images/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/images/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Ceník",
+      "short_name": "Ceník",
+      "description": "Zobrazit ceník služeb",
+      "url": "/cenik",
+      "icons": [
+        {
+          "src": "/static/images/logo.webp",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Kontakt",
+      "short_name": "Kontakt",
+      "description": "Kontaktní informace",
+      "url": "/kontakt",
+      "icons": [
+        {
+          "src": "/static/images/logo.webp",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
+
