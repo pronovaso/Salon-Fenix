@@ -17,6 +17,7 @@ module.exports = async () => {
                     hostname: 'placehold.co',
                 },
             ],
+            qualities: [75, 90],
         },
         headers: async () => {
             // Build headers dynamically so we can differ between dev and prod
