@@ -10,7 +10,6 @@ node_modules/
 
 # Generovane soubory jazyku
 client/Lang.ts
-lang/cs.json
 
 # Definice pro deploy do Google Cloud App Engine / nastavuje CircleCI
 app.yaml
