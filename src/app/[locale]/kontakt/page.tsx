@@ -1,7 +1,7 @@
+import {Metadata} from 'next';
 import ContactPage from '../../../common/Contact/ContactPage';
 import {getIntl} from '../../../lib/intl';
 import {generateMetadata as genMeta} from '../../../lib/metadata';
-import {Metadata} from 'next';
 
 type Props = {
     params: Promise<{locale: string}>;
@@ -21,7 +21,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     });
 }
 
-const Page = async ({params}: Props) => {
+const Page = async () => {
     return <ContactPage />;
 };
 
