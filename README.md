@@ -216,7 +216,21 @@ Projekt používá:
 
 ### Vercel (doporučeno)
 
-Projekt je připraven pro deployment na Vercel:
+Projekt je připraven pro deployment na Vercel pomocí GitHub Actions. Automatické nasazení se spustí při pushu do `dev` větve.
+
+#### Nastavení GitHub Actions
+
+1. V GitHub repository nastavte následující secrets (Settings → Secrets and variables → Actions):
+   - `VERCEL_TOKEN` - Vercel token (Settings → Tokens v Vercelu)
+   - `VERCEL_ORG_ID` - ID organizace v Vercelu
+   - `VERCEL_PROJECT_ID` - ID projektu v Vercelu
+
+2. Nastavte environment variables v Vercelu (viz [docs/vercel-env-setup.md](docs/vercel-env-setup.md)):
+   - `MAILERSEND_API_KEY`
+   - `RECAPTCHA_SECRET_KEY`
+   - `RECAPTCHA_SITE_KEY`
+
+#### Ruční deployment
 
 ```bash
 # Instalace Vercel CLI
