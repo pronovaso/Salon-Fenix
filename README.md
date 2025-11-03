@@ -216,26 +216,25 @@ Projekt používá:
 
 ### Vercel (doporučeno)
 
-Projekt je připraven pro deployment na Vercel pomocí GitHub Actions. Automatické nasazení se spustí při pushu do `dev` větve.
+Projekt je připraven pro deployment na Vercel přes Vercel Git integration. Automatické nasazení se spustí při každém pushi do jakékoliv větve.
 
 #### První nastavení
 
-**⚠️ Důležité:** Před použitím GitHub Actions musíte projekt naimportovat do Vercelu!
-
 1. **Naimportujte projekt do Vercelu** (viz [docs/vercel-initial-setup.md](docs/vercel-initial-setup.md)):
    - Přes Vercel Dashboard nebo CLI
-   - Získejte `VERCEL_TOKEN`, `VERCEL_ORG_ID` a `VERCEL_PROJECT_ID`
-   - **Poznámka:** Vercel defaultně nasazuje `main` větev. Pro `dev` větev použijte GitHub Actions (viz [docs/vercel-branch-setup.md](docs/vercel-branch-setup.md))
+   - Propojte GitHub repository
+   - Vercel automaticky detekuje Next.js projekt
 
-2. **Nastavte GitHub Secrets** (Settings → Secrets and variables → Actions):
-   - `VERCEL_TOKEN` - Vercel token (Settings → Tokens v Vercelu)
-   - `VERCEL_ORG_ID` - ID organizace v Vercelu
-   - `VERCEL_PROJECT_ID` - ID projektu v Vercelu
-
-3. **Nastavte environment variables v Vercelu** (viz [docs/vercel-env-setup.md](docs/vercel-env-setup.md)):
+2. **Nastavte environment variables v Vercelu** (viz [docs/vercel-env-setup.md](docs/vercel-env-setup.md)):
    - `MAILERSEND_API_KEY`
    - `RECAPTCHA_SECRET_KEY`
    - `RECAPTCHA_SITE_KEY`
+
+#### Jak to funguje
+
+- **Production**: `main` větev se automaticky nasazuje jako production deployment
+- **Preview**: Všechny ostatní větve (včetně `dev`) se automaticky nasazují jako preview deployments
+- Více informací v [docs/vercel-branch-setup.md](docs/vercel-branch-setup.md)
 
 #### Ruční deployment
 

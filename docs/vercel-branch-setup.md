@@ -19,36 +19,25 @@ Pokud chcete změnit, která větev se nasazuje do produkce:
 
 ## Pro DEV větev
 
-Pro projekt Salon Fénix používáme **GitHub Actions** pro automatické nasazování z `dev` větve jako preview deployments. To znamená:
+Pro projekt Salon Fénix používáme **Vercel Git integration** pro automatické nasazování. To znamená:
 
-- **Production**: `main` větev (pokud je nastavena v Vercelu)
-- **Preview/Dev**: `dev` větev (nasazována přes GitHub Actions)
+- **Production**: `main` větev (nasazována automaticky jako production deployment)
+- **Preview/Dev**: `dev` větev (nasazována automaticky jako preview deployment)
 
 ## Jak to funguje
 
 1. **Při pushu do `main` větve:**
    - Vercel automaticky nasadí jako production deployment
-   - Pokud je GitHub Actions workflow aktivní, může také spustit deployment
 
-2. **Při pushu do `dev` větve:**
-   - GitHub Actions workflow spustí preview deployment
-   - Vercel také může automaticky vytvořit preview deployment (pokud je aktivní auto-deploy pro všechny větve)
-
-## Deaktivace automatického nasazování z Vercelu
-
-Pokud chcete používat pouze GitHub Actions pro nasazování:
-
-1. V Vercel Dashboard → **Settings** → **Git**
-2. V sekci **Deploy Hooks** můžete deaktivovat automatické nasazování
-3. Nebo jednoduše nepoužívejte push do větví, které chcete nasazovat pouze přes GitHub Actions
+2. **Při pushu do `dev` větve (nebo jakékoliv jiné větve):**
+   - Vercel automaticky vytvoří preview deployment s dočasnou URL
 
 ## Doporučené nastavení
 
 Pro tento projekt:
-- ✅ **Production Branch**: `main` (výchozí)
-- ✅ **GitHub Actions**: Nasazuje `dev` jako preview
-- ✅ **Vercel Auto-deploy**: Aktivní pro `main` (produkce)
-- ✅ **Preview Deployments**: Automaticky z GitHub Actions pro `dev`
+- ✅ **Production Branch**: `main` (výchozí, nastaveno v Vercel Dashboard)
+- ✅ **Vercel Auto-deploy**: Aktivní pro všechny větve
+- ✅ **Preview Deployments**: Automaticky pro všechny větve kromě production branch
 
 ## Troubleshooting
 
@@ -56,18 +45,10 @@ Pro tento projekt:
 
 1. Zkontrolujte **Settings** → **Git** → **Production Branch**
 2. Ujistěte se, že máte správnou větev v GitHub repository
-3. Zkontrolujte GitHub Actions workflow, že nasazuje správnou větev
-
-### Duplicitní deployments
-
-Pokud vidíte, že se projekt nasazuje dvakrát (jednou z Vercelu, jednou z GitHub Actions):
-
-1. V Vercel Dashboard → **Settings** → **Git**
-2. Zkontrolujte **Deploy Hooks** nebo **Ignored Build Step**
-3. Můžete nastavit podmínku, aby Vercel nenasazoval, pokud je to GitHub Actions deployment
 
 ### Jak poznat, který deployment je který
 
-- **Vercel Auto-deploy**: V komentáři deploymentu uvidíte "Deployed via Vercel Git integration"
-- **GitHub Actions**: V komentáři deploymentu uvidíte "Deployed via GitHub Actions" nebo podobný text
+- **Production Deployment**: Nasazováno z `main` větve (nebo jiné nastavené production branch)
+- **Preview Deployment**: Nasazováno z jakékoliv jiné větve (např. `dev`)
+- V komentáři deploymentu uvidíte "Deployed via Vercel Git integration"
 

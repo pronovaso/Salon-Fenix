@@ -1,6 +1,6 @@
 # První nastavení projektu v Vercelu
 
-Tento dokument popisuje, jak naimportovat projekt do Vercelu a získat potřebné credentials pro GitHub Actions.
+Tento dokument popisuje, jak naimportovat projekt do Vercelu a propojit ho s GitHub repository pro automatické nasazování.
 
 ## Krok 1: Import projektu do Vercelu
 
@@ -43,66 +43,7 @@ vercel
 # - Override settings: N (nechte výchozí nastavení)
 ```
 
-## Krok 2: Získání credentials pro GitHub Actions
-
-Po úspěšném importu projektu potřebujete získat tři hodnoty:
-
-### 1. VERCEL_TOKEN
-
-1. V Vercel Dashboard přejděte na **Settings** → **Tokens**
-2. Klikněte na **Create Token**
-3. Zadejte název tokenu (např. "GitHub Actions")
-4. Vyberte scope (neomezený nebo pouze pro konkrétní projekt)
-5. Klikněte na **Create**
-6. **Zkopírujte token** (zobrazí se pouze jednou!)
-
-### 2. VERCEL_ORG_ID
-
-1. V Vercel Dashboard přejděte na **Settings** → **General**
-2. V sekci **Organization ID** najdete vaše **Organization ID**
-3. Zkopírujte ID
-
-### 3. VERCEL_PROJECT_ID
-
-1. V Vercel Dashboard přejděte do vašeho projektu
-2. Přejděte na **Settings** → **General**
-3. V sekci **Project ID** najdete vaše **Project ID**
-4. Zkopírujte ID
-
-**Alternativně můžete získat ID z `.vercel/project.json` po prvním deploymentu:**
-
-```bash
-# Po prvním deploymentu přes CLI
-cat .vercel/project.json
-```
-
-Výstup bude vypadat takto:
-```json
-{
-  "projectId": "prj_xxxxxxxxxxxxx",
-  "orgId": "team_xxxxxxxxxxxxx"
-}
-```
-
-## Krok 3: Nastavení GitHub Secrets
-
-1. V GitHub repository přejděte na **Settings** → **Secrets and variables** → **Actions**
-2. Klikněte na **New repository secret**
-3. Přidejte každý secret:
-
-   **Secret 1: VERCEL_TOKEN**
-   - Name: `VERCEL_TOKEN`
-   - Value: (token z kroku 2.1)
-
-   **Secret 2: VERCEL_ORG_ID**
-   - Name: `VERCEL_ORG_ID`
-   - Value: (Organization ID z kroku 2.2)
-
-   **Secret 3: VERCEL_PROJECT_ID**
-   - Name: `VERCEL_PROJECT_ID`
-   - Value: (Project ID z kroku 2.3)
-
-## Krok 4: Nastavení Production Branch (volitelné)
+## Krok 2: Nastavení Production Branch (volitelné)
 
 Pokud chcete, aby `dev` větev byla nasazována místo `main`:
 
@@ -111,9 +52,9 @@ Pokud chcete, aby `dev` větev byla nasazována místo `main`:
 3. V sekci **Production Branch** změňte branch z `main` na `dev` (nebo jinou větev)
 4. Uložte změny
 
-**Poznámka:** GitHub Actions workflow nasazuje `dev` větev jako preview deployment, takže toto nastavení není nutné, pokud chcete používat automatické preview deployments z GitHub Actions.
+**Poznámka:** Vercel automaticky nasazuje všechny větve. `main` větev (nebo jiná nastavená production branch) se nasazuje jako production, ostatní větve jako preview deployments.
 
-## Krok 5: Nastavení Environment Variables
+## Krok 3: Nastavení Environment Variables
 
 Nastavte environment variables v Vercelu (viz [vercel-env-setup.md](./vercel-env-setup.md)):
 - `MAILERSEND_API_KEY`
@@ -124,10 +65,12 @@ Nastavte environment variables v Vercelu (viz [vercel-env-setup.md](./vercel-env
 
 Po dokončení všech kroků můžete ověřit, že vše funguje:
 
-1. Pushněte změny do `dev` větve
-2. GitHub Actions workflow by se měl automaticky spustit
-3. V GitHub repository → **Actions** uvidíte běžící workflow
-4. Po úspěšném deploymentu uvidíte URL v GitHub Actions výstupu
+1. Pushněte změny do jakékoliv větve (např. `dev`)
+2. Vercel automaticky detekuje push a spustí deployment
+3. V Vercel Dashboard → **Deployments** uvidíte běžící deployment
+4. Po úspěšném deploymentu obdržíte URL:
+   - **Production**: Trvalá URL pro `main` větev
+   - **Preview**: Dočasná URL pro ostatní větve
 
 ## Troubleshooting
 
@@ -136,17 +79,7 @@ Po dokončení všech kroků můžete ověřit, že vše funguje:
 - V GitHub repository → **Settings** → **Integrations** → **Vercel** zkontrolujte, že je integrace aktivní
 
 ### Chyba při deploymentu
-- Zkontrolujte, že jsou všechny tři secrets správně nastavené v GitHub
-- Ověřte, že environment variables jsou nastavené v Vercelu pro **Preview** environment
-- Zkontrolujte logy v GitHub Actions pro detailnější chybové hlášky
-
-### Jak získat Project ID a Org ID rychle přes CLI
-
-```bash
-# Po vercel login
-vercel projects ls
-vercel project ls
-```
-
-Nebo zkontrolujte `.vercel/project.json` po prvním deploymentu.
+- Ověřte, že environment variables jsou nastavené v Vercelu pro správné environments (**Production** a **Preview**)
+- Zkontrolujte build logy v Vercel Dashboard pro detailnější chybové hlášky
+- Ujistěte se, že build command je správně nastavený (`pnpm build` nebo `npm run build`)
 
