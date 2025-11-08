@@ -6,7 +6,7 @@ type Props = {locale: string};
 const Hero: React.FC<Props> = async ({locale}) => {
     const intl = await getIntl(locale || 'cs');
     return (
-        <section className="relative bg-cover bg-center bg-no-repeat py-20 lg:py-32" style={{backgroundImage: 'url(/static/images/background.png)'}}>
+        <section className="relative bg-cover bg-center bg-no-repeat py-20 lg:py-32" style={{backgroundImage: 'url(/static/images/background.webp)'}}>
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/50" />
             <div className="container mx-auto px-4 relative z-10">

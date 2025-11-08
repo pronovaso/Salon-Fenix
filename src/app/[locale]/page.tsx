@@ -1,5 +1,6 @@
 import {getIntl} from '@lib/intl';
 import {generateMetadata as genMeta} from '@lib/metadata';
+import {getIndexServices} from '@lib/services';
 import {Metadata} from 'next';
 import Image from 'next/image';
 import Hero from 'src/common/Hero/Hero';
@@ -27,44 +28,24 @@ const HomePage = async ({params}: Props) => {
     const {locale} = await params;
     const intl = await getIntl(locale);
 
-    const featuredServices = [
-        {
-            title: intl.formatMessage({id: 'home.featured.instrumentalPedicure.title'}),
-            description: intl.formatMessage({id: 'home.featured.instrumentalPedicure.description'}),
-            price: '580 Kč',
-            image: '/static/images/Pristrojova_pedikura.webp',
-        },
-        {
-            title: intl.formatMessage({id: 'home.featured.relax60.title'}),
-            description: intl.formatMessage({id: 'home.featured.relax60.description'}),
-            price: '1000 Kč',
-            image: '/static/images/Relax.webp',
-        },
-        {
-            title: intl.formatMessage({id: 'home.featured.kartPedicure.title'}),
-            description: intl.formatMessage({id: 'home.featured.kartPedicure.description'}),
-            price: '1500 Kč',
-            image: '/static/images/Kart.webp',
-        },
-        {
-            title: intl.formatMessage({id: 'servicesList.maderotherapy'}),
-            description: intl.formatMessage({id: 'home.featured.maderotherapy.description'}),
-            price: '1100 Kč',
-            image: '/static/images/Maderoterapie.webp',
-        },
-        {
-            title: intl.formatMessage({id: 'servicesList.cosmeticTreatment'}),
-            description: intl.formatMessage({id: 'home.featured.cosmeticTreatment.description'}),
-            price: '1290 Kč',
-            image: '/static/images/Zakladni_osetreni.webp',
-        },
-        {
-            title: intl.formatMessage({id: 'servicesList.manicureShellac'}),
-            description: intl.formatMessage({id: 'home.featured.manicureShellac.description'}),
-            price: '640 Kč',
-            image: '/static/images/Shellac.webp',
-        },
-    ];
+    const indexServicesData = getIndexServices();
+    const featuredServices = indexServicesData.map((service) => {
+        // Speciální mapování pro klasickou masáž
+        let titleKey = `servicesList.${service.id}`;
+        let descriptionKey = `servicesList.${service.id}.description`;
+
+        if (service.id === 'klasickaMasaz') {
+            titleKey = 'sluzby.masaz.klasicka';
+            descriptionKey = 'sluzby.masaz.klasicka.description';
+        }
+
+        return {
+            title: intl.formatMessage({id: titleKey as any}),
+            description: intl.formatMessage({id: descriptionKey as any}),
+            price: service.price,
+            image: service.image,
+        };
+    });
 
     const contactInfo = {
         phone: '+420 606 313 452',

@@ -32,7 +32,7 @@ const PricingPage = async ({params}: Props) => {
             {/* Hero Section */}
             <section
                 className="bg-linear-to-br from-blue-50 to-white py-16 bg-cover bg-center bg-no-repeat"
-                style={{backgroundImage: 'url(/static/images/background.png)'}}
+                style={{backgroundImage: 'url(/static/images/background.webp)'}}
             >
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto">

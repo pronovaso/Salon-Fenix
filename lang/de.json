@@ -63,7 +63,7 @@
   "contact.nextToPizzeria": "(neben Pizzeria Milano)",
   "contact.weekendAppointments": "und nach telefonischer Vereinbarung + Wochenenden",
   "contact.whereToFind": "Wo Sie uns finden",
-  "contact.location": "Salon Fénix befindet sich im Zentrum von Lipno nad Vltavou",
+  "contact.location": "Salon Fénix befindet sich in der Přední Výtoň 256",
   "contact.openInMaps": "In Google Maps öffnen",
 
   "gallery.title": "Fotogalerie",
@@ -89,7 +89,7 @@
   "gallery.images.skincare": "Hautpflege",
 
   "home.meta.title": "Salon Fénix - Startseite",
-  "home.meta.description": "Salon Fénix - professionelle kosmetische und Massagedienstleistungen in Lipno nad Vltavou",
+  "home.meta.description": "Salon Fénix - professionelle kosmetische und Massagedienstleistungen in Předním Výtoňi 256",
   "home.featured.instrumentalPedicure.title": "Gerätepediküre",
   "home.featured.instrumentalPedicure.description": "Pflege Ihrer Füße und Nägel mit professionellem Gerät. Nagelspangen. Tiefe Nagelabrasion.",
   "home.featured.relax60.title": "Entspannungsmassage 60 Minuten",
@@ -102,7 +102,7 @@
   "home.membership.title": "Wir sind Mitglied der Tschechischen Podiatrischen Gesellschaft",
   "home.membership.description": "Unsere Professionalität und Qualität der Dienstleistungen werden durch die Mitgliedschaft in der renommierten Tschechischen Podiatrischen Gesellschaft bestätigt",
 
-  "footer.copyright": "© {year} SALON FÉNIX. Lipno 90 (neben Pizzeria Milano), Lipno nad Vltavou",
+  "footer.copyright": "© {year} SALON FÉNIX. Přední Výtoň 256",
   "footer.quickLinks": "Schnelllinks",
 
   "form.name": "Vor- und Nachname",
@@ -135,7 +135,7 @@
   "portfolio.title": "Portfolio",
 
   "portfolio.machinePedicure.title": "Gerätepediküre",
-  "portfolio.machinePedicure.subtitle": "Modernste Gerätepediküre in Lipno nad Vltavou",
+  "portfolio.machinePedicure.subtitle": "Modernste Gerätepediküre in Předním Výtoňi 256",
   "portfolio.machinePedicure.description1": "Gerätepediküre ist eine moderne und schonende Methode zur Fußbehandlung, die spezielle Rotationsfräser mit Diamant- und Keramikaufsätzen verwendet. Diese Methode ist für alle Altersgruppen geeignet und bietet viele Vorteile gegenüber der klassischen Pediküre.",
   "portfolio.machinePedicure.description2": "Unsere Pediküre ist auch für Diabetiker und Personen mit Gefäßproblemen geeignet. Alle Werkzeuge werden nach jeder Verwendung im MELAG-Gerät sterilisiert, das hundertprozentige Sterilität garantiert. Für Ihre maximale Sicherheit verwenden wir ausschließlich Einweg-Feilen und Fräser.",
   "portfolio.machinePedicure.nailSpoons.title": "Nagelbetten",
@@ -241,5 +241,7 @@
   "portfolio.massage.contraindications.items.7": "Blutungsstörungen und Gerinnungsstörungen",
   "portfolio.massage.contraindications.items.8": "Kürzlich durchgeführte Operationen (Konsultation mit Arzt erforderlich)",
   "portfolio.massage.contraindications.items.9": "Akute Entzündungen und Infektionskrankheiten",
-  "portfolio.massage.contraindications.note": "Bei Zweifeln über die Eignung einer Massage sollten Sie sich immer im Voraus mit Ihrem Arzt beraten."
+  "portfolio.massage.contraindications.note": "Bei Zweifeln über die Eignung einer Massage sollten Sie sich immer im Voraus mit Ihrem Arzt beraten.",
+  "sluzby.masaz.klasicka": "Klassische Massage",
+  "sluzby.masaz.klasicka.description": "Klassische Massage ist eine Massage, die mit Händen bis zum Körper durchgeführt wird. Sie ist für die Entspannung, den Ruhezustand, die schnelle Wiedererlangung neuer Kräfte und die allgemeine Harmonisierung von Körper und Geist geeignet. Sie wirkt sich positiv auf den gesamten Organismus aus, lindert Schmerzen in Wirbelsäule, Gelenken und Muskeln. Sie regt die Durchblutung an und wirkt sich positiv auf das Nervensystem aus."
 }

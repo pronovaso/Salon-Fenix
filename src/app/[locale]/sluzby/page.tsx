@@ -1,7 +1,8 @@
 import ServiceCard from '@common/ServiceCard/ServiceCard';
+import {Metadata} from 'next';
 import {getIntl} from '../../../lib/intl';
 import {generateMetadata as genMeta} from '../../../lib/metadata';
-import {Metadata} from 'next';
+import {getServices} from '../../../lib/services';
 
 type Props = {
     params: Promise<{locale: string}>;
@@ -25,62 +26,24 @@ const ServicesPage = async ({params}: Props) => {
     const {locale} = await params;
     const intl = await getIntl(locale);
 
-    const services = [
-        {
-            title: 'Relaxační masáže',
-            description: 'Klasická relaxační masáž pro uvolnění svalového napětí a stresu. Ideální pro regeneraci těla i duše.',
-            price: 'od 800 Kč',
-            image: '/static/images/Relax.webp',
-        },
-        {
-            title: 'Rašelinové zábaly',
-            description: 'Hluboce prohřívají, detoxikují organismus a pomáhají při revmatických potížích.',
-            price: '900 Kč',
-            image: '/static/images/Raselina.webp',
-        },
-        {
-            title: 'Havajská masáž Lomi Lomi',
-            description: 'Tradiční havajská masáž pomocí předloktí a dlaní. Pracuje s energií a uvolňuje blokády.',
-            price: '1200 Kč',
-            image: '/static/images/Lomi.webp',
-        },
-        {
-            title: 'Thajská masáž',
-            description: 'Akupresurní masáž kombinovaná s protahováním. Zlepšuje flexibilitu a energii těla.',
-            price: '1000 Kč',
-            image: '/static/images/Thai.webp',
-        },
-        {
-            title: 'Přístrojová pedikúra',
-            description: 'Profesionální péče o chodidla a nehty pomocí moderních přístrojů. Včetně nehtových špon a hloubkové abraze.',
-            price: '580 Kč',
-            image: '/static/images/Pristrojova_pedikura.webp',
-        },
-        {
-            title: 'Kart pedikúra',
-            description: 'Nová vize péče o nohy založená na principech péče o pleť. Moderní přístup k pedikúře.',
-            price: '1500 Kč',
-            image: '/static/images/Kart.webp',
-        },
-        {
-            title: 'Maderoterapie',
-            description: 'Masáž přírodními dřevěnými válečky. Aktivuje lymfatický systém, pomáhá proti celulitidě a tvaruje postavu.',
-            price: '1100 Kč',
-            image: '/static/images/Maderoterapie.webp',
-        },
-        {
-            title: 'Základní kosmetické ošetření',
-            description: 'Kompletní péče o pleť obličeje, krku a dekoltu. Odlíčení, čištění, peeling, masáž, maska a krém.',
-            price: '1290 Kč',
-            image: '/static/images/Zakladni_osetreni.webp',
-        },
-        {
-            title: 'Manikúra + Shellac',
-            description: 'Profesionální manikúra s aplikací kvalitního Shellac laků pro dlouhotrvající efekt až 3 týdny.',
-            price: '640 Kč',
-            image: '/static/images/Shellac.webp',
-        },
-    ];
+    const servicesData = getServices();
+    const services = servicesData.map((service) => {
+        // Speciální mapování pro klasickou masáž
+        let titleKey = `servicesList.${service.id}`;
+        let descriptionKey = `servicesList.${service.id}.description`;
+
+        if (service.id === 'klasickaMasaz') {
+            titleKey = 'sluzby.masaz.klasicka';
+            descriptionKey = 'sluzby.masaz.klasicka.description';
+        }
+
+        return {
+            title: intl.formatMessage({id: titleKey as any}),
+            description: intl.formatMessage({id: descriptionKey as any}),
+            price: service.price,
+            image: service.image,
+        };
+    });
 
     const prefix = locale === 'cs' ? '' : `/${locale}`;
 
@@ -89,7 +52,7 @@ const ServicesPage = async ({params}: Props) => {
             {/* Hero Section */}
             <section
                 className="bg-linear-to-br from-blue-50 to-white py-16 bg-cover bg-center bg-no-repeat"
-                style={{backgroundImage: 'url(/static/images/background.png)'}}
+                style={{backgroundImage: 'url(/static/images/background.webp)'}}
             >
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto">

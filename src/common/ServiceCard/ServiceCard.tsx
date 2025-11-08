@@ -13,7 +13,7 @@ type Props = {
 const ServiceCard: React.FC<Props> = async ({title, description, image = 'https://placehold.co/400x300/e5e7eb/6b7280?text=Service', price, locale = 'cs'}) => {
     const intl = await getIntl(locale);
     return (
-        <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+        <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col h-full">
             <div className="relative h-48 overflow-hidden">
                 <Image
                     src={image}
@@ -25,12 +25,12 @@ const ServiceCard: React.FC<Props> = async ({title, description, image = 'https:
                 <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
 
-            <div className="p-6">
+            <div className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-3 flex-1 min-h-0">{description}</p>
 
                 {price && (
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-auto pt-2">
                         <span className="text-2xl font-bold text-blue-600">{price}</span>
                         <a
                             href={`${locale === 'cs' ? '' : `/${locale}`}/kontakt`}

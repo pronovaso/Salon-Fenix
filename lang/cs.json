@@ -63,7 +63,7 @@
   "contact.nextToPizzeria": "(vedle pizzerie Milano)",
   "contact.weekendAppointments": "a dle telefonických objednávek + víkendy",
   "contact.whereToFind": "Kde nás najdete",
-  "contact.location": "Salon Fénix se nachází v centru Lipna nad Vltavou",
+  "contact.location": "Salon Fénix se nachází v Předním Výtoňi 256",
   "contact.openInMaps": "Otevřít v Google Maps",
 
   "gallery.title": "Fotogalerie",
@@ -102,7 +102,7 @@
   "home.membership.title": "Jsme členem České podiatrické společnosti",
   "home.membership.description": "Naše profesionalita a kvalita služeb jsou potvrzeny členstvím v prestižní České podiatrické společnosti",
 
-  "footer.copyright": "© {year} SALON FÉNIX. Lipno 90 (vedle pizzerie Milano), Lipno nad Vltavou",
+  "footer.copyright": "© {year} SALON FÉNIX. Přední Výtoň 256",
   "footer.quickLinks": "Rychlé odkazy",
 
   "form.name": "Jméno a příjmení",
@@ -125,6 +125,16 @@
   "servicesList.manicureShellac": "Manikúra + Shellac",
   "servicesList.maderotherapy": "Maderoterapie",
   "servicesList.otherService": "Jiná služba",
+  "servicesList.raselinoveZabaly": "Rašelinové zábaly",
+  "servicesList.raselinoveZabaly.description": "Hluboce prohřívají, detoxikují organismus a pomáhají při revmatických potížích.",
+  "servicesList.thajskaMasaz": "Thajská masáž",
+  "servicesList.thajskaMasaz.description": "Akupresurní masáž kombinovaná s protahováním. Zlepšuje flexibilitu a energii těla.",
+  "servicesList.instrumentalPedicure.description": "Profesionální péče o chodidla a nehty pomocí moderních přístrojů. Včetně nehtových špon a hloubkové abraze.",
+  "servicesList.kartPedikura": "Kart pedikúra",
+  "servicesList.kartPedikura.description": "Nová vize péče o nohy založená na principech péče o pleť. Moderní přístup k pedikúře.",
+  "servicesList.maderotherapy.description": "Masáž přírodními dřevěnými válečky. Aktivuje lymfatický systém, pomáhá proti celulitidě a tvaruje postavu.",
+  "servicesList.cosmeticTreatment.description": "Kompletní péče o pleť obličeje, krku a dekoltu. Odlíčení, čištění, peeling, masáž, maska a krém.",
+  "servicesList.manicureShellac.description": "Profesionální manikúra s aplikací kvalitního Shellac laků pro dlouhotrvající efekt až 3 týdny.",
 
   "cta.bookMassage": "Objednejte si termín masáže",
   "cta.bookToday": "Zarezervujte si svůj termín ještě dnes",
@@ -241,5 +251,7 @@
   "portfolio.massage.contraindications.items.7": "Krvácivé stavy a poruchy srážlivosti krve",
   "portfolio.massage.contraindications.items.8": "Nedávno prodělané operace (nutná konzultace s lékařem)",
   "portfolio.massage.contraindications.items.9": "Akutní záněty a infekční onemocnění",
-  "portfolio.massage.contraindications.note": "V případě pochybností o vhodnosti masáže se vždy předem poraďte se svým lékařem."
+  "portfolio.massage.contraindications.note": "V případě pochybností o vhodnosti masáže se vždy předem poraďte se svým lékařem.",
+  "sluzby.masaz.klasicka": "Klasická masáž",
+  "sluzby.masaz.klasicka.description": "Klasická masáž je masáž, která se provádí pomocí rukou až po tělo. Je určena k relaxaci, odpočinku, rychlému nabrání nových sil a celkové harmonizaci těla i duše. Působí příznivě na celý organismus, tlumí bolesti páteře a kloubů, svalů. Povzbuzuje krevní oběh a příznivě ovlivňuje nervový systém."
 }

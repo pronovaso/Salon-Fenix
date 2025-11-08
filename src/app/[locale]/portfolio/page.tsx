@@ -1,7 +1,7 @@
 import PortfolioCard from '@common/PortfolioCard/PortfolioCard';
+import {Metadata} from 'next';
 import {getIntl} from '../../../lib/intl';
 import {generateMetadata as genMeta} from '../../../lib/metadata';
-import {Metadata} from 'next';
 
 type Props = {
     params: Promise<{locale: string}>;
@@ -164,7 +164,7 @@ const PortfolioPage = async ({params}: Props) => {
         <>
             <section
                 className="bg-linear-to-br from-blue-50 to-white py-22 bg-cover bg-center bg-no-repeat"
-                style={{backgroundImage: 'url(/static/images/background.png)'}}
+                style={{backgroundImage: 'url(/static/images/background.webp)'}}
             >
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-bold text-white mb-16 text-center">{intl.formatMessage({id: 'portfolio.title'})}</h1>

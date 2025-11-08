@@ -41,8 +41,8 @@ const ContactPage: React.FC = () => {
     const contactInfo = {
         phone: '+420 606 313 452',
         email: 'info@salon-fenix.cz',
-        address: 'Lipno 90',
-        city: '382 78 Lipno nad Vltavou',
+        address: 'Přední Výtoň 256',
+        city: '382 78 Přední Výtoň',
         hours: 'Po - Pá: 10:00 - 17:00',
         additionalHours: 'a dle telefonických objednávek + víkendy',
         coordinates: {
@@ -179,7 +179,7 @@ const ContactPage: React.FC = () => {
             {/* Hero Section */}
             <section
                 className="bg-linear-to-br from-blue-50 to-white py-16 bg-cover bg-center bg-no-repeat"
-                style={{backgroundImage: 'url(/static/images/background.png)'}}
+                style={{backgroundImage: 'url(/static/images/background.webp)'}}
             >
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto">

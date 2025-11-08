@@ -63,7 +63,7 @@
   "contact.nextToPizzeria": "(next to Pizzeria Milano)",
   "contact.weekendAppointments": "and by phone appointment + weekends",
   "contact.whereToFind": "Where to find us",
-  "contact.location": "Salon Fénix is located in the center of Lipno nad Vltavou",
+  "contact.location": "Salon Fénix is located in the Přední Výtoň 256",
   "contact.openInMaps": "Open in Google Maps",
 
   "gallery.title": "Photo Gallery",
@@ -89,7 +89,7 @@
   "gallery.images.skincare": "Skincare",
 
   "home.meta.title": "Salon Fénix - Home",
-  "home.meta.description": "Salon Fénix - professional cosmetic and massage services in Lipno nad Vltavou",
+  "home.meta.description": "Salon Fénix - professional cosmetic and massage services in Předním Výtoňi 256",
   "home.featured.instrumentalPedicure.title": "Machine pedicure",
   "home.featured.instrumentalPedicure.description": "Care for your feet and nails with professional equipment. Nail clamps. Deep nail abrasion.",
   "home.featured.relax60.title": "Relaxation massage 60 minutes",
@@ -102,7 +102,7 @@
   "home.membership.title": "We are members of the Czech Podiatric Society",
   "home.membership.description": "Our professionalism and quality of services are confirmed by membership in the prestigious Czech Podiatric Society",
 
-  "footer.copyright": "© {year} SALON FÉNIX. Lipno 90 (next to Pizzeria Milano), Lipno nad Vltavou",
+  "footer.copyright": "© {year} SALON FÉNIX. Přední Výtoň 256",
   "footer.quickLinks": "Quick links",
 
   "form.name": "Full name",
@@ -135,7 +135,7 @@
   "portfolio.title": "Portfolio",
 
   "portfolio.machinePedicure.title": "Machine pedicure",
-  "portfolio.machinePedicure.subtitle": "Most modern machine pedicure in Lipno nad Vltavou",
+  "portfolio.machinePedicure.subtitle": "Most modern machine pedicure in Předním Výtoňi 256",
   "portfolio.machinePedicure.description1": "Machine pedicure is a modern and gentle method of foot treatment that uses special rotary cutters with diamond and ceramic attachments. This method is suitable for all age groups and offers many advantages over classic pedicure.",
   "portfolio.machinePedicure.description2": "Our pedicure is also suitable for diabetics and people with vascular problems. All tools are sterilized after each use in a MELAG device, which guarantees 100% sterility. For your maximum safety, we use exclusively disposable files and cutters.",
   "portfolio.machinePedicure.nailSpoons.title": "Nail beds",
@@ -241,5 +241,7 @@
   "portfolio.massage.contraindications.items.7": "Bleeding disorders and coagulation disorders",
   "portfolio.massage.contraindications.items.8": "Recently undergone surgeries (consultation with a doctor required)",
   "portfolio.massage.contraindications.items.9": "Acute inflammation and infectious diseases",
-  "portfolio.massage.contraindications.note": "If you have any doubts about the suitability of a massage, always consult your doctor in advance."
+  "portfolio.massage.contraindications.note": "If you have any doubts about the suitability of a massage, always consult your doctor in advance.",
+  "sluzby.masaz.klasicka": "Classic Massage",
+  "sluzby.masaz.klasicka.description": "Classic Massage is a massage that is performed with hands up to the body. It is suitable for relaxation, rest, quick recovery of new strength and overall harmonization of body and spirit. It has a positive effect on the entire organism, relieves pain in the spine, joints and muscles. It stimulates blood circulation and has a positive effect on the nervous system."
 }

@@ -15,7 +15,7 @@ const MapSection: React.FC = () => {
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="w-full" style={{height: '500px'}}>
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.234391423885!2d14.22941131566082!3d48.63417997925284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47700d2e8a9d9e1f%3A0x5a2d4b9b8c0b6e0a!2sLipno%20nad%20Vltavou%2090%2C%20382%2078%20Lipno%20nad%20Vltavou!5e0!3m2!1scs!2scz!4v1645637890123!5m2!1scs!2scz"
+                                src="https://www.google.com/maps?q=48.6274,14.1697&output=embed&hl=cs"
                                 width="100%"
                                 height="100%"
                                 style={{border: 0}}

@@ -32,9 +32,8 @@ const Footer = async ({locale, prefix}: FooterProps) => {
                         <div className="text-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-4">{intl.formatMessage({id: 'common.address'})}</h3>
                             <div className="text-gray-600">
-                                <p>Lipno 90</p>
-                                <p>382 78 Lipno nad Vltavou</p>
-                                <p className="text-sm mt-2">{intl.formatMessage({id: 'contact.nextToPizzeria'})}</p>
+                                <p>{'Přední Výtoň 256'}</p>
+                                <p>{'382 78 Přední Výtoň'}</p>
                             </div>
                         </div>
 

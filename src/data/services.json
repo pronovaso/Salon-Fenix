@@ -1,0 +1,51 @@
+[
+  {
+    "id": "raselinoveZabaly",
+    "image": "/static/images/Raselina.webp",
+    "price": "900 Kč",
+    "index": false
+  },
+  {
+    "id": "thajskaMasaz",
+    "image": "/static/images/Thai.webp",
+    "price": "1000 Kč",
+    "index": false
+  },
+  {
+    "id": "instrumentalPedicure",
+    "image": "/static/images/Pristrojova_pedikura.webp",
+    "price": "580 Kč",
+    "index": true
+  },
+  {
+    "id": "kartPedikura",
+    "image": "/static/images/Kart.webp",
+    "price": "1500 Kč",
+    "index": false
+  },
+  {
+    "id": "maderotherapy",
+    "image": "/static/images/Maderoterapie.webp",
+    "price": "1100 Kč",
+    "index": false
+  },
+  {
+    "id": "cosmeticTreatment",
+    "image": "/static/images/Zakladni_osetreni.webp",
+    "price": "1290 Kč",
+    "index": true
+  },
+  {
+    "id": "manicureShellac",
+    "image": "/static/images/Shellac.webp",
+    "price": "640 Kč",
+    "index": false
+  },
+  {
+    "id": "klasickaMasaz",
+    "image": "/static/images/Relax.webp",
+    "price": "1000 Kč",
+    "index": true
+  }
+]
+

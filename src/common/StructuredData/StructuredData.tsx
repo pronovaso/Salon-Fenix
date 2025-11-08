@@ -47,8 +47,8 @@ export default function StructuredData({locale = 'cs'}: StructuredDataProps) {
         email: 'info@salon-fenix.cz',
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Lipno 90',
-            addressLocality: 'Lipno nad Vltavou',
+            streetAddress: 'Přední Výtoň 256',
+            addressLocality: 'Přední Výtoň',
             addressCountry: 'CZ',
         },
         geo: {
@@ -67,10 +67,10 @@ export default function StructuredData({locale = 'cs'}: StructuredDataProps) {
         priceRange: '$$',
         description:
             locale === 'cs'
-                ? 'Salon Fénix - profesionální kosmetické a masážní služby v Lipně nad Vltavou. Nabízíme masáže, pedikúru, manikúru a kosmetické ošetření.'
+                ? 'Salon Fénix - profesionální kosmetické a masážní služby v Předním Výtoňi 256. Nabízíme masáže, pedikúru, manikúru a kosmetické ošetření.'
                 : locale === 'en'
-                  ? 'Salon Fénix - professional cosmetic and massage services in Lipno nad Vltavou. We offer massages, pedicure, manicure and cosmetic treatments.'
-                  : 'Salon Fénix - professionelle kosmetische und Massagedienstleistungen in Lipno nad Vltavou. Wir bieten Massagen, Pediküre, Maniküre und kosmetische Behandlungen.',
+                  ? 'Salon Fénix - professional cosmetic and massage services in Předním Výtoňi 256. We offer massages, pedicure, manicure and cosmetic treatments.'
+                  : 'Salon Fénix - professionelle kosmetische und Massagedienstleistungen in Předním Výtoňi 256. Wir bieten Massagen, Pediküre, Maniküre und kosmetische Behandlungen.',
     };
 
     return <Script id="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(businessData)}} />;
