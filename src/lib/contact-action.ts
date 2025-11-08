@@ -44,11 +44,10 @@ export const submitContactForm = async (formData: ContactFormData): Promise<Cont
         }
 
         return {success: true};
-    } catch (error: any) {
-        console.error('Contact form error:', error);
+    } catch (error: unknown) {
         return {
             success: false,
-            message: error?.message || 'Došlo k chybě při zpracování požadavku',
+            message: error instanceof Error ? error.message : 'Došlo k chybě při zpracování požadavku',
         };
     }
 };

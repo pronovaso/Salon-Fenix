@@ -15,13 +15,13 @@ type Props = {
 const RootLayout = async ({children, params}: Props) => {
     const {locale} = await params;
     const reqHeaders = await headers();
-    const nonce = (reqHeaders as any).get?.('x-nonce') ?? undefined;
+    const nonce = reqHeaders.get?.('x-nonce') ?? undefined;
     const env = await getEnvValueArray(['RECAPTCHA_SITE_KEY']);
     const reCaptchaCode = env.RECAPTCHA_SITE_KEY || '';
 
-    const intl = await getIntl(locale as any);
+    const intl = await getIntl(locale);
     // Get messages for IntlProvider
-    const messages = await getMessages(locale as any);
+    const messages = await getMessages(locale);
     const prefix = locale === 'cs' ? '' : `/${locale}`;
     const navigation = [
         {name: intl.formatMessage({id: 'navigation.home'}), href: prefix || '/'},

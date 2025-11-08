@@ -17,7 +17,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     const description = intl.formatMessage({id: 'home.meta.description'});
 
     return genMeta({
-        locale: locale as any,
+        locale,
         title,
         description,
         path: '/',
@@ -40,8 +40,8 @@ const HomePage = async ({params}: Props) => {
         }
 
         return {
-            title: intl.formatMessage({id: titleKey as any}),
-            description: intl.formatMessage({id: descriptionKey as any}),
+            title: intl.formatMessage({id: titleKey}),
+            description: intl.formatMessage({id: descriptionKey}),
             price: service.price,
             image: service.image,
         };

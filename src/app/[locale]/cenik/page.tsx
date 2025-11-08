@@ -46,12 +46,12 @@ const PricingPage = async ({params}: Props) => {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        {(pricing as any).categories.map((category: any) => (
+                        {pricing.categories.map((category) => (
                             <div key={category.id} className="mb-12">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-2">{category.name}</h2>
                                 {category.description && <p className="text-gray-600 mb-4">{category.description}</p>}
                                 <div className="space-y-3">
-                                    {category.services.map((service: any) => (
+                                    {category.services.map((service) => (
                                         <div
                                             key={service.id}
                                             className="flex justify-between items-start p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
