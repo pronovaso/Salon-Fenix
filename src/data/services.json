@@ -6,12 +6,6 @@
     "index": false
   },
   {
-    "id": "thajskaMasaz",
-    "image": "/static/images/Thai.webp",
-    "price": "1000 Kč",
-    "index": false
-  },
-  {
     "id": "instrumentalPedicure",
     "image": "/static/images/Pristrojova_pedikura.webp",
     "price": "580 Kč",

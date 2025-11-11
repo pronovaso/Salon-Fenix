@@ -165,15 +165,7 @@
         },
         { "id": "gto-aplikace", "name": "Aplikace GTO špony", "description": "60 minut", "price": 1150 },
         { "id": "gto-presazeni", "name": "Přesazení GTO špony", "description": "60 minut", "price": 400 },
-        { "id": "combiped", "name": "Nehtové špony Combiped", "price": 500 },
-        { "id": "podofix", "name": "Nehtové špony Podofix", "price": 500 },
         { "id": "tamponada-1", "name": "Tamponáda 1 nehet", "description": "10 minut", "price": 60 },
-        {
-          "id": "tamponada",
-          "name": "Tamponáda nehtu",
-          "price": 60,
-          "description": "jemný mul pod okraj nehtu; max 4–5 dní"
-        },
         {
           "id": "sulci",
           "name": "SULCI protector",
@@ -226,6 +218,12 @@
       "id": "kosmetika",
       "name": "Kosmetika",
       "services": [
+        {
+          "id": "apollo-duet-60",
+          "name": "Apollo Duet - vyhlazení vrásek",
+          "description": "zpevnění kontur, hydratace pleti, sjednocení tónu pleti ( s kosmetickým ošetřením)",
+          "price": 2490
+        },
         {
           "id": "equilibrium-120",
           "name": "Equilibrium hydratace a rovnováha pleti",
