@@ -6,12 +6,14 @@ import {z} from 'zod';
 import {submitContactFormNodeMailer} from '@lib/contact-action';
 import {useIntl} from 'react-intl';
 import {recaptchaVerify} from '../../lib/recaptcha-action';
+import {getServices} from '../../lib/services';
 import {logger} from '../services/CommonService';
 import MapSection from './MapSection';
 import RecaptchaCheckbox from './RecaptchaCheckbox';
 
 const ContactPage: React.FC = () => {
     const intl = useIntl();
+    const services = getServices();
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -356,11 +358,18 @@ const ContactPage: React.FC = () => {
                                         className={`w-full px-4 py-3 border ${errors.service ? 'border-red-500' : 'border-gray-300'} rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
                                     >
                                         <option value="">{intl.formatMessage({id: 'form.selectService'})}</option>
-                                        <option value="relax-massage">{intl.formatMessage({id: 'servicesList.relaxMassage'})}</option>
-                                        <option value="pedikura">{intl.formatMessage({id: 'servicesList.instrumentalPedicure'})}</option>
-                                        <option value="kosmetika">{intl.formatMessage({id: 'servicesList.cosmeticTreatment'})}</option>
-                                        <option value="manikura">{intl.formatMessage({id: 'servicesList.manicureShellac'})}</option>
-                                        <option value="maderoterapie">{intl.formatMessage({id: 'servicesList.maderotherapy'})}</option>
+                                        {services.map((service) => {
+                                            // Speciální mapování pro klasickou masáž
+                                            let titleKey = `servicesList.${service.id}`;
+                                            if (service.id === 'klasickaMasaz') {
+                                                titleKey = 'sluzby.masaz.klasicka';
+                                            }
+                                            return (
+                                                <option key={service.id} value={service.id}>
+                                                    {intl.formatMessage({id: titleKey})}
+                                                </option>
+                                            );
+                                        })}
                                         <option value="other">{intl.formatMessage({id: 'servicesList.otherService'})}</option>
                                     </select>
                                     {errors.service && <p className="mt-1 text-sm text-red-600">{errors.service}</p>}
