@@ -1,4 +1,5 @@
 import {getDirection} from '@lib/intl';
+import {SpeedInsights} from '@vercel/speed-insights/next';
 import {Metadata, Viewport} from 'next';
 import {i18n} from '../../i18n-config';
 import './globals.css';
@@ -8,7 +9,10 @@ const RootLayout = ({children}: {children: React.ReactNode}) => {
     const dir = getDirection(defaultLang) ?? 'ltr';
     return (
         <html lang={defaultLang} dir={dir}>
-            <body>{children}</body>
+            <body>
+                {children}
+                <SpeedInsights />
+            </body>
         </html>
     );
 };

@@ -3,7 +3,7 @@ import type {ChangeEvent} from 'react';
 import React, {useCallback, useState} from 'react';
 import {z} from 'zod';
 
-import {submitContactForm} from '@lib/contact-action';
+import {submitContactFormNodeMailer} from '@lib/contact-action';
 import {useIntl} from 'react-intl';
 import {recaptchaVerify} from '../../lib/recaptcha-action';
 import {logger} from '../services/CommonService';
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
             setIsSubmitting(true);
 
             // Use server action instead of API route
-            const result = await submitContactForm(formattedData);
+            const result = await submitContactFormNodeMailer(formattedData);
 
             if (!result.success) {
                 throw new Error(result.message || 'Nepodařilo se odeslat zprávu');
