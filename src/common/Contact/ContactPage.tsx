@@ -259,7 +259,6 @@ const ContactPage: React.FC = () => {
                                         <h3 className="text-lg font-semibold text-gray-900">{intl.formatMessage({id: 'common.address'})}</h3>
                                         <p className="text-gray-900 text-lg">{contactInfo.address}</p>
                                         <p className="text-gray-900 text-lg">{contactInfo.city}</p>
-                                        <p className="text-gray-600 text-sm mt-1">{intl.formatMessage({id: 'contact.nextToPizzeria'})}</p>
                                     </div>
                                 </div>
 
