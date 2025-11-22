@@ -68,6 +68,7 @@ export const submitContactFormNodeMailer = async (formData: ContactFormData): Pr
         });
         const mailOptions = {
             from: process.env.MAIL_FROM ?? '',
+            cc: process.env.MAIL_FROM ?? '',
             to: formData.email,
             subject: `Rezervace služby ${formData.service}`,
             html: `
@@ -78,6 +79,8 @@ export const submitContactFormNodeMailer = async (formData: ContactFormData): Pr
                 <p><strong>Služba:</strong> ${formData.service}</p>
                 <p><strong>Datum:</strong> ${formData.date}</p>
                 ${formData.message ? `<p><strong>Zpráva:</strong><br>${formData.message}</p>` : ''}
+
+                Upozornění: Toto je automatická zpráva, prosím neodpovídejte na ni.
             `,
         };
         const info = await transporter.sendMail(mailOptions);
