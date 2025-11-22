@@ -67,8 +67,8 @@ export const submitContactFormNodeMailer = async (formData: ContactFormData): Pr
             },
         });
         const mailOptions = {
-            from: process.env.MAIL_FROM ?? '',
-            cc: process.env.MAIL_FROM ?? '',
+            from: process.env.GMAIL_USERNAME ?? '',
+            cc: process.env.GMAIL_USERNAME ?? '',
             to: formData.email,
             subject: `Rezervace služby ${formData.service}`,
             html: `
