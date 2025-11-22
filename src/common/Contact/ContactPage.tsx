@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
 
     const contactInfo = {
         phone: '+420 606 313 452',
-        email: 'info@salon-fenix.cz',
+        email: 'salon.fenix.lipno@gmail.com',
         address: 'Přední Výtoň 256',
         city: '382 78 Přední Výtoň',
         hours: 'Po - Pá: 10:00 - 17:00',
@@ -235,7 +235,7 @@ const ContactPage: React.FC = () => {
                                     </div>
                                     <div className="ml-4">
                                         <h3 className="text-lg font-semibold text-gray-900">{intl.formatMessage({id: 'common.email'})}</h3>
-                                        <a href="mailto:info@salon-fenix.cz" className="text-blue-600 hover:text-blue-800 text-lg font-medium">
+                                        <a href="mailto:salon.fenix.lipno@gmail.com" className="text-blue-600 hover:text-blue-800 text-lg font-medium">
                                             {contactInfo.email}
                                         </a>
                                         <p className="text-gray-600 text-sm mt-1">{intl.formatMessage({id: 'contact.questionsInfo'})}</p>

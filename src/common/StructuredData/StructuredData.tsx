@@ -44,7 +44,7 @@ export default function StructuredData({locale = 'cs'}: StructuredDataProps) {
         '@id': 'https://www.salon-fenix.cz',
         url: 'https://www.salon-fenix.cz',
         telephone: '+420606313452',
-        email: 'info@salon-fenix.cz',
+        email: 'salon.fenix.lipno@gmail.com',
         address: {
             '@type': 'PostalAddress',
             streetAddress: 'Přední Výtoň 256',
