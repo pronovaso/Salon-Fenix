@@ -20,6 +20,7 @@ type Props = {
 };
 
 const PortfolioCard: React.FC<Props> = ({item}) => {
+    console.log('🚀 ~ PortfolioCard ~ item:', item);
     const [isExpanded, setIsExpanded] = useState(false);
     const intl = useIntl();
 

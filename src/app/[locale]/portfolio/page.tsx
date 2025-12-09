@@ -30,7 +30,7 @@ const PortfolioPage = async ({params}: Props) => {
             id: 'machine-pedicure',
             title: intl.formatMessage({id: 'portfolio.machinePedicure.title'}),
             description: intl.formatMessage({id: 'portfolio.machinePedicure.description1'}),
-            image: '/static/images/manikura_lipno-13-5.jpg',
+            image: '/static/images/salon_7.webp',
             alt: intl.formatMessage({id: 'portfolio.machinePedicure.title'}),
             details: [
                 {
@@ -69,7 +69,7 @@ const PortfolioPage = async ({params}: Props) => {
             id: 'manicure',
             title: intl.formatMessage({id: 'portfolio.manicure.title'}),
             description: intl.formatMessage({id: 'portfolio.manicure.pShine.description1'}),
-            image: '/static/images/manikura_lipno-4.jpg',
+            image: '/static/images/Shellac.webp',
             alt: intl.formatMessage({id: 'portfolio.manicure.title'}),
             details: [
                 {
@@ -92,7 +92,7 @@ const PortfolioPage = async ({params}: Props) => {
             id: 'luxury-cosmetics',
             title: intl.formatMessage({id: 'portfolio.luxuryCosmetics.title'}),
             description: intl.formatMessage({id: 'portfolio.luxuryCosmetics.description'}),
-            image: '/static/images/manikura_lipno-15.jpg',
+            image: '/static/images/luxus.webp',
             alt: intl.formatMessage({id: 'portfolio.luxuryCosmetics.title'}),
             details: [
                 {
@@ -130,7 +130,7 @@ const PortfolioPage = async ({params}: Props) => {
             id: 'massage',
             title: intl.formatMessage({id: 'portfolio.massage.title'}),
             description: intl.formatMessage({id: 'portfolio.massage.relaxing.description'}),
-            image: '/static/images/manikura_lipno-17.jpg',
+            image: '/static/images/Thai.webp',
             alt: intl.formatMessage({id: 'portfolio.massage.title'}),
             details: [
                 {
