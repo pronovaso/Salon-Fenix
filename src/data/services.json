@@ -1,14 +1,8 @@
 [
   {
-    "id": "raselinoveZabaly",
-    "image": "/static/images/Raselina.webp",
-    "price": "900 Kč",
-    "index": false
-  },
-  {
     "id": "instrumentalPedicure",
     "image": "/static/images/Pristrojova_pedikura.webp",
-    "price": "580 Kč",
+    "price": "630 Kč",
     "index": true
   },
   {
@@ -26,7 +20,7 @@
   {
     "id": "cosmeticTreatment",
     "image": "/static/images/Zakladni_osetreni.webp",
-    "price": "1290 Kč",
+    "price": "1390 Kč",
     "index": true
   },
   {
@@ -39,6 +33,24 @@
     "id": "klasickaMasaz",
     "image": "/static/images/Relax.webp",
     "price": "1000 Kč",
+    "index": true
+  },
+  {
+    "id": "solarium",
+    "image": "/static/images/salon_9.webp",
+    "price": "od 19 Kč",
+    "index": true
+  },
+  {
+    "id": "lymfodrenaz",
+    "image": "/static/images/lymfodrenaz.webp",
+    "price": "od 300 Kč",
+    "index": true
+  },
+  {
+    "id": "bemer",
+    "image": "/static/images/bemer.webp",
+    "price": "od 150 Kč",
     "index": true
   }
 ]

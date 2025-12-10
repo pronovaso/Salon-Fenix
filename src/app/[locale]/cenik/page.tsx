@@ -62,12 +62,11 @@ const PricingPage = async ({params}: Props) => {
                                                     <p className="text-sm text-gray-600 mt-1">{service.description}</p>
                                                 ) : null}
                                             </div>
-                                            <span className="text-xl font-bold text-blue-600">
-                                                {typeof service.price === 'number' ? `${service.price} Kč` : service.price}
-                                            </span>
+                                            <span className="text-xl font-bold text-blue-600">{`${service.price} Kč`}</span>
                                         </div>
                                     ))}
                                 </div>
+                                {category.notes && <p className="text-red-600 mt-4">{category.notes}</p>}
                             </div>
                         ))}
                     </div>

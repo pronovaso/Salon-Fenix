@@ -18,6 +18,8 @@ const Footer = async ({locale, prefix}: FooterProps) => {
                         <div className="text-center">
                             <h3 className="text-lg font-semibold text-gray-900 mb-4">{intl.formatMessage({id: 'contact.contactInfo'})}</h3>
                             <div className="space-y-2 text-gray-600">
+                                <p>{'Vendula Staňková'}</p>
+                                <p>{intl.formatMessage({id: 'common.name.description'})}</p>
                                 <p>
                                     <a href="tel:+420606313452" className="text-blue-600 hover:text-blue-800 underline">
                                         {'+420 606 313 452'}
@@ -33,7 +35,7 @@ const Footer = async ({locale, prefix}: FooterProps) => {
                             <h3 className="text-lg font-semibold text-gray-900 mb-4">{intl.formatMessage({id: 'common.address'})}</h3>
                             <div className="text-gray-600">
                                 <p>{'Přední Výtoň 256'}</p>
-                                <p>{'382 78 Přední Výtoň'}</p>
+                                <p>{'382 73 Přední Výtoň'}</p>
                             </div>
                         </div>
 

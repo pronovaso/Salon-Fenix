@@ -4,14 +4,7 @@ import {i18n} from '../../i18n-config';
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.salon-fenix.cz';
 
-    const routes = [
-        '',
-        '/sluzby',
-        '/cenik',
-        '/kontakt',
-        '/fotogalerie',
-        '/portfolio',
-    ];
+    const routes = ['', '/sluzby', '/cenik', '/kontakt', '/portfolio', '/fotogalerie'];
 
     const sitemapEntries: MetadataRoute.Sitemap = [];
 
@@ -32,4 +25,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return sitemapEntries;
 }
-

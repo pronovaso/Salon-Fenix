@@ -1,131 +1,27 @@
 {
   "categories": [
-    {
-      "id": "bemer",
-      "name": "Bemer - Terapie",
-      "description": "Stimulace cévní reaktivity malých a nejmenších cév. Nízkofrekvenční pulzní elektromagnetická pole.",
-      "services": [
-        { "id": "bemer-8", "name": "8 min", "price": 150 },
-        { "id": "bemer-8x10", "name": "10 x 8 min", "price": 1200 },
-        { "id": "bemer-20", "name": "20 min", "price": 300 },
-        { "id": "bemer-20x10", "name": "10 x 20 min", "price": 2500 }
-      ]
-    },
-    {
-      "id": "klasicke-masaze",
-      "name": "Klasické masáže",
-      "services": [
-        { "id": "sport-30", "name": "Sportovní masáž", "description": "30 minut", "price": 550 },
-        { "id": "sport-60", "name": "Sportovní masáž", "description": "60 minut", "price": 1000 },
-        { "id": "dolni-koncetiny-30", "name": "Dolní končetiny", "description": "30 minut", "price": 550 },
-        { "id": "celkova-60", "name": "Celková masáž", "description": "60 minut", "price": 1000 },
-        { "id": "celkova-80", "name": "Celková masáž", "description": "80 minut", "price": 1300 },
-        {
-          "id": "reflexni-chodidel-30",
-          "name": "Reflexní terapie chodidel",
-          "description": "30 minut",
-          "price": 550
-        },
-        { "id": "lymfa-oblicej-25", "name": "Lymfatická masáž obličeje", "description": "25 minut", "price": 600 },
-        { "id": "lymfa-telo-60", "name": "Lymfatická masáž celého těla", "description": "60 minut", "price": 1200 },
-        { "id": "tehotenska-60", "name": "Těhotenská masáž 60 minut", "price": 1100 },
-        {
-          "id": "raselinovy-zabal-60",
-          "name": "Regenerační rašelinový zábal a masáž",
-          "description": "60 minut",
-          "price": 1000
-        },
-        { "id": "lavove-kameny-60", "name": "Masáž lávovými kameny", "description": "60 minut", "price": 1000 },
-        {
-          "id": "uvolnujici-lavove-60",
-          "name": "Uvolňující masáž s lávovými kameny",
-          "description": "60 minut",
-          "price": 1000
-        },
-        {
-          "id": "uvolnujici-bankami-60",
-          "name": "Uvolňující masáž s baňkami",
-          "description": "60 minut",
-          "price": 1100
-        },
-        { "id": "coko-peeling-90", "name": "Čokoládová masáž s peelingem", "description": "90 minut", "price": 1400 },
-        { "id": "peeling-zad-nohou-30", "name": "Peeling zad/nohou", "description": "30 minut", "price": 600 }
-      ]
-    },
-    {
-      "id": "solarium",
-      "name": "Solárium Ergoline",
-      "description": "UV/kolagenové světlo",
-      "services": [
-        { "id": "solarium-jednorazovy-1min", "name": "Jednorázový vstup", "description": "1 min.", "price": 19 },
-        { "id": "solarium-permanentka-120", "name": "Permanentka", "description": "120 min.", "price": 2100 }
-      ]
-    },
-    {
-      "id": "lymfodrenaz",
-      "name": "Přístrojová lymfodrenáž Balancer-Pro",
-      "services": [
-        { "id": "balancer-20", "name": "20 min", "description": "20 minut", "price": 300 },
-        { "id": "balancer-20x10", "name": "10 x 20 min (hygienické prádlo v ceně)", "description": "10 x 20 minut", "price": 2550 },
-        { "id": "balancer-50", "name": "50 min", "description": "50 minut", "price": 600 },
-        { "id": "balancer-50x10", "name": "10 x 50 min (hygienické prádlo v ceně)", "description": "10 x 50 minut", "price": 5400 }
-      ]
-    },
-    {
-      "id": "specialni-masaze",
-      "name": "Speciální masáže",
-      "services": [
-        {
-          "id": "coko-90",
-          "name": "Čokoládová masáž",
-          "description": "90 minut",
-          "price": 1400,
-          "subDescription": "peeling, masáž, zábal, sprcha a tělový olej"
-        },
-        { "id": "madero-55-1", "name": "Maderoterapie těla", "description": "1x 55 minut", "price": 1100 },
-        { "id": "madero-55-5", "name": "Maderoterapie těla", "description": "5x 55 minut", "price": 5000 },
-        { "id": "madero-55-10", "name": "Maderoterapie těla", "description": "10x 55 minut", "price": 10000 }
-      ]
-    },
-    {
+     {
       "id": "pedikura",
       "name": "Pedikúra",
       "services": [
-        { "id": "pristrojova", "name": "Přístrojová pedikúra", "price": 580 },
+        { "id": "pristrojova", "name": "Přístrojová pedikúra", "price": 630 },
         {
           "id": "kart",
           "name": "Kart pedikúra",
           "price": 1500,
           "description": "nová vize péče o nohy založená na principech péče o pleť"
         },
-        { "id": "castecna", "name": "Částečná pedikúra (pouze úprava nehtů)", "price": 300 },
         {
-          "id": "hyperkeratoza",
-          "name": "Extrémní hyperkeratóza (k základní pedikúře)",
-          "price": "50 Kč / 10 min"
-        },
-        {
-          "id": "zbytnene-plotenky",
-          "name": "Snížení i úprava zbytnělých plotének a zbroušení mykotických nehtů",
-          "price": 150
-        },
-        {
-          "id": "odstraneni-kuze",
-          "name": "Odstranění větší vrstvy kůže, vybroušení prasklin (extra procedura)",
-          "price": 250
-        },
-        {
-          "id": "pshine-nohy",
-          "name": "P-Shine",
-          "description": "45 minut (japonská manikúra nehty u nohou)",
-          "price": 300
+          "id": "odborna",
+          "name": "Odborná pedikůra, kuří oka, praskliny, otlaky",
+          "price": 720
         },
         {
           "id": "kuriodstr",
           "name": "Odstranění kuřího oka (bez pedikúry)",
-          "price": "50 / 130 Kč"
+          "price": 250
         },
-        { "id": "diabeticka", "name": "DIABETICKÁ pedikúra (přibližně)", "price": 680 },
+        { "id": "diabeticka", "name": "DIABETICKÁ pedikúra", "price": 730 },
         {
           "id": "silikon-korektor",
           "name": "Silikonový korektor",
@@ -148,7 +44,7 @@
         { "id": "lak-cnd", "name": "CND lak", "price": 130 },
         {
           "id": "gel-lak-cnd",
-          "name": "Lakování nehtů Gel-lakem CND",
+          "name": "Lakování nehtů Shellac CND / Gelllak",
           "description": "po předchozí pedikúře",
           "price": 250
         }
@@ -163,8 +59,8 @@
           "name": "Aplikace nehtového rovnátka – Podostripe, Combiped, Podofix",
           "price": 600
         },
-        { "id": "gto-aplikace", "name": "Aplikace GTO špony", "description": "60 minut", "price": 1150 },
-        { "id": "gto-presazeni", "name": "Přesazení GTO špony", "description": "60 minut", "price": 400 },
+        { "id": "gto-aplikace", "name": "Aplikace GTO špony", "description": "", "price": 1150 },
+        { "id": "gto-presazeni", "name": "Přesazení GTO špony", "description": "", "price": 400 },
         { "id": "tamponada-1", "name": "Tamponáda 1 nehet", "description": "10 minut", "price": 60 },
         {
           "id": "sulci",
@@ -176,13 +72,50 @@
         { "id": "parafin-nohy", "name": "Parafínový zábal nohou", "description": "20 minut", "price": 180 },
         { "id": "peeling-ruce", "name": "Peeling rukou", "description": "15 minut", "price": 100 },
         { "id": "peeling-nohy", "name": "Peeling nohou", "description": "15 minut", "price": 100 },
-        { "id": "maska-nohy", "name": "Výživná maska se zábalem", "description": "15 minut – nohy", "price": 130 },
-        { "id": "maska-ruce", "name": "Výživná maska se zábalem", "description": "15 minut – ruce", "price": 130 }
+        { "id": "maska-nohy", "name": "Výživná maska se zábalem", "description": "15 minut – nohy / ruce", "price": "130 / 150" },
+        { "id": "depilace-lytka", "name": "Depilace teplým voskem – lýtka", "price": 250 },
+        { "id": "depilace-stehna", "name": "Depilace teplým voskem – stehna", "price": 270 },
+        {
+          "id": "depilace-nohy-kolena",
+          "name": "Depilace teplým voskem – nohy ke kolenům",
+          "price": 450
+        },
+        { "id": "depilace-cele-nohy", "name": "Depilace teplým voskem – celé nohy", "price": 650 }
+      ]
+    },
+    {
+      "id": "klasicke-masaze",
+      "name": "Klasické masáže",
+      "services": [
+        { "id": "sport-30", "name": "Sportovní masáž", "description": "30 / 60 minut", "price": "550 / 1000" },
+        { "id": "dolni-koncetiny-30", "name": "Dolní končetiny", "description": "30 minut", "price": 550 },
+        { "id": "celkova-60", "name": "Celková masáž", "description": "60 / 80 minut", "price": "1000 / 1300" },
+        
+        { "id": "tehotenska-60", "name": "Těhotenská masáž 60 minut", "price": 1100 },
+        {
+          "id": "raselinovy-zabal-60",
+          "name": "Regenerační rašelinový zábal a masáž",
+          "description": "60 minut",
+          "price": 1000
+        },
+        { "id": "lavove-kameny-60", "name": "Masáž lávovými kameny", "description": "60 minut", "price": 1000 },
+        {
+          "id": "uvolnujici-bankami-60",
+          "name": "Uvolňující masáž s baňkami",
+          "description": "60 minut",
+          "price": 1100
+        },
+        { "id": "coko-peeling-90", "name": "Čokoládová masáž s peelingem", "description": "90 minut", "price": 1400 },
+        { "id": "madero-55-1", "name": "Maderoterapie těla", "description": "1x 55 minut", "price": 1100 },
+        { "id": "madero-55-5", "name": "Maderoterapie těla", "description": "5x 55 minut", "price": 5000 },
+        { "id": "madero-55-10", "name": "Maderoterapie těla", "description": "10x 55 minut", "price": 10000 },
+        { "id": "peeling-zad-nohou-30", "name": "Peeling zad/nohou", "description": "30 minut", "price": 600 }
       ]
     },
     {
       "id": "manikura",
       "name": "Manikúra",
+      "notes": "Modeláž z vietnamských salonů NEODSTRAŇUJEME!",
       "services": [
         { "id": "klasicka-30", "name": "Klasická", "description": "30 minut", "price": 350 },
         {
@@ -194,14 +127,8 @@
         {
           "id": "lak-prirodni-30",
           "name": "Lakování přírodních nehtů",
-          "description": "do 30 minut (CND nebo SPA RITUAL)",
+          "description": "CND nebo SPA RITUAL",
           "price": 160
-        },
-        {
-          "id": "gel-lak-cnd-90",
-          "name": "Lakování Gel-lakem CND",
-          "description": "90 minut (Shellac)",
-          "price": 500
         },
         {
           "id": "prodlouzena-20",
@@ -222,17 +149,17 @@
           "id": "apollo-duet-60",
           "name": "Apollo Duet - vyhlazení vrásek",
           "description": "zpevnění kontur, hydratace pleti, sjednocení tónu pleti ( s kosmetickým ošetřením)",
-          "price": 2490
+          "price": 1990
         },
         {
           "id": "equilibrium-120",
           "name": "Equilibrium hydratace a rovnováha pleti",
           "description": "120 min",
-          "price": 1290
+          "price": 1390
         },
-        { "id": "infinity-120", "name": "Infinity line ošetření", "description": "120 min", "price": 1290 },
-        { "id": "xebor-120", "name": "Xebor line", "description": "120 min", "price": 1290 },
-        { "id": "calming-120", "name": "Calming line", "description": "120 min", "price": 1290 },
+        { "id": "infinity-120", "name": "Infinity line ošetření", "description": "120 min", "price": 1390 },
+        { "id": "xebor-120", "name": "Xebor line", "description": "120 min", "price": 1390 },
+        { "id": "calming-120", "name": "Calming line", "description": "120 min", "price": 1390 },
         {
           "id": "vitaminy-120",
           "name": "Vitamíny, antioxidanty, hloubková výživa",
@@ -241,7 +168,6 @@
         },
         { "id": "firmezza", "name": "Firmezza line liftingová omlazující péče", "price": 1590 },
         { "id": "white-line", "name": "White line", "price": 1590 },
-        { "id": "alginat", "name": "Alginátová maska k ošetření", "description": "dle typu pleti", "price": 450 },
         { "id": "laminace-oboci", "name": "Laminace obočí", "price": 850 },
         { "id": "lash-lifting", "name": "Lash Lifting řas", "price": 850 },
         {
@@ -251,24 +177,39 @@
           "price": 1300
         },
         { "id": "chemicky-peeling", "name": "Chemický peeling", "price": 750 },
-        { "id": "uprav-oboci", "name": "Úprava obočí", "price": 110 },
-        { "id": "barveni-oboci", "name": "Barvení obočí", "price": 120 },
         { "id": "barveni-ras", "name": "Barvení řas", "price": 150 },
-        { "id": "uprav-barveni-oboci", "name": "Úprava + barvení obočí", "price": 180 },
-        { "id": "depilace-lytka", "name": "Depilace teplým voskem – lýtka", "price": 250 },
-        { "id": "depilace-stehna", "name": "Depilace teplým voskem – stehna", "price": 270 },
-        {
-          "id": "depilace-nohy-kolena",
-          "name": "Depilace teplým voskem – nohy ke kolenům",
-          "price": 450
-        },
-        { "id": "depilace-cele-nohy", "name": "Depilace teplým voskem – celé nohy", "price": 650 },
-        { "id": "depilace-trisla", "name": "Depilace teplým voskem – třísla", "price": 170 },
-        { "id": "depilace-ruce", "name": "Depilace teplým voskem – obě ruky", "price": 200 },
-        { "id": "depilace-horni-ret", "name": "Depilace teplým voskem – horní ret", "price": 90 },
-        { "id": "depilace-brada", "name": "Depilace teplým voskem – brada", "price": 110 },
-        { "id": "depilace-oblicej", "name": "Depilace teplým voskem – obličej", "price": 300 },
-        { "id": "depilace-podpazi", "name": "Depilace teplým voskem – podpaží", "price": 170 }
+        { "id": "uprav-barveni-oboci", "name": "Úprava + barvení obočí", "price": 250 }
+       
+      ]
+    },
+    {
+      "id": "solarium",
+      "name": "Solárium Ergoline",
+      "description": "UV/kolagenové světlo",
+      "services": [
+        { "id": "solarium-jednorazovy-1min", "name": "Jednorázový vstup", "description": "1 min.", "price": 19 },
+        { "id": "solarium-permanentka-120", "name": "Permanentka", "description": "120 min.", "price": 2100 }
+      ]
+    },
+    {
+      "id": "lymfodrenaz",
+      "name": "Přístrojová lymfodrenáž Balancer-Pro",
+      "services": [
+        { "id": "balancer-20", "name": "30 min", "description": "20 minut", "price": 300 },
+        { "id": "balancer-20x10", "name": "10 x 30 min (hygienické prádlo v ceně)", "description": "10 x 20 minut", "price": 2550 },
+        { "id": "balancer-50", "name": "50 min", "description": "50 minut", "price": 600 },
+        { "id": "balancer-50x10", "name": "10 x 50 min (hygienické prádlo v ceně)", "description": "10 x 50 minut", "price": 5400 }
+      ]
+    },
+    {
+      "id": "bemer",
+      "name": "Bemer - Terapie",
+      "description": "Stimulace cévní reaktivity malých a nejmenších cév. Nízkofrekvenční pulzní elektromagnetická pole.",
+      "services": [
+        { "id": "bemer-8", "name": "8 min", "price": 150 },
+        { "id": "bemer-8x10", "name": "10 x 8 min", "price": 1200 },
+        { "id": "bemer-20", "name": "20 min", "price": 300 },
+        { "id": "bemer-20x10", "name": "10 x 20 min", "price": 2500 }
       ]
     }
   ],
@@ -309,7 +250,7 @@
     }
   ],
   "info": {
-    "paymentMethods": ["Hotovost", "Platební karta", "Bankovní převod"],
+    "paymentMethods": ["Hotovost", "QR kód", "Bankovní převod"],
     "cancellationPolicy": "Zrušení rezervace méně než 12 hodin předem může být zpoplatněno 50% ceny služby.",
     "reservationPolicy": "Rezervace je nutná provést alespoň 24 hodin předem.",
     "giftVouchers": "Dárkové poukazy jsou k dispozici v jakékoliv hodnotě.",

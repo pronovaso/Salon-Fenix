@@ -28,8 +28,8 @@ const RootLayout = async ({children, params}: Props) => {
         {name: intl.formatMessage({id: 'navigation.services'}), href: `${prefix}/sluzby` || '/sluzby'},
         {name: intl.formatMessage({id: 'navigation.pricing'}), href: `${prefix}/cenik` || '/cenik'},
         {name: intl.formatMessage({id: 'navigation.contact'}), href: `${prefix}/kontakt` || '/kontakt'},
-        {name: intl.formatMessage({id: 'navigation.gallery'}), href: `${prefix}/fotogalerie` || '/fotogalerie'},
         {name: intl.formatMessage({id: 'navigation.portfolio'}), href: `${prefix}/portfolio` || '/portfolio'},
+        {name: intl.formatMessage({id: 'navigation.gallery'}), href: `${prefix}/fotogalerie` || '/fotogalerie'},
     ];
     const brandName = intl.formatMessage({id: 'hero.title'});
     const openMenuLabel = 'Open main menu';

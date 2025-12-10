@@ -71,22 +71,6 @@ const PortfolioPage = async ({params}: Props) => {
             description: intl.formatMessage({id: 'portfolio.manicure.pShine.description1'}),
             image: '/static/images/Shellac.webp',
             alt: intl.formatMessage({id: 'portfolio.manicure.title'}),
-            details: [
-                {
-                    title: intl.formatMessage({id: 'portfolio.manicure.pShine.title'}),
-                    items: [
-                        intl.formatMessage({id: 'portfolio.manicure.pShine.description1'}),
-                        intl.formatMessage({id: 'portfolio.manicure.pShine.description2'}),
-                    ],
-                },
-                {
-                    title: intl.formatMessage({id: 'portfolio.manicure.afterPShine.title'}),
-                    items: [
-                        intl.formatMessage({id: 'portfolio.manicure.afterPShine.description1'}),
-                        intl.formatMessage({id: 'portfolio.manicure.afterPShine.description2'}),
-                    ],
-                },
-            ],
         },
         {
             id: 'luxury-cosmetics',
@@ -155,6 +139,63 @@ const PortfolioPage = async ({params}: Props) => {
                 {
                     title: intl.formatMessage({id: 'portfolio.massage.contraindications.title'}),
                     items: [intl.formatMessage({id: 'portfolio.massage.contraindications.description'})],
+                },
+            ],
+        },
+        {
+            id: 'solarium',
+            title: intl.formatMessage({id: 'portfolio.solarium.title'}),
+            description: intl.formatMessage({id: 'portfolio.solarium.description'}),
+            image: '/static/images/salon_9.webp',
+            alt: intl.formatMessage({id: 'portfolio.solarium.title'}),
+            details: [
+                {
+                    title: intl.formatMessage({id: 'portfolio.solarium.benefits.title'}),
+                    items: [
+                        intl.formatMessage({id: 'portfolio.solarium.benefits.0'}),
+                        intl.formatMessage({id: 'portfolio.solarium.benefits.1'}),
+                        intl.formatMessage({id: 'portfolio.solarium.benefits.2'}),
+                        intl.formatMessage({id: 'portfolio.solarium.benefits.3'}),
+                        intl.formatMessage({id: 'portfolio.solarium.benefits.4'}),
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'lymfodrenaz',
+            title: intl.formatMessage({id: 'portfolio.lymfodrenaz.title'}),
+            description: intl.formatMessage({id: 'portfolio.lymfodrenaz.description'}),
+            image: '/static/images/lymfodrenaz.webp',
+            alt: intl.formatMessage({id: 'portfolio.lymfodrenaz.title'}),
+            details: [
+                {
+                    title: intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.title'}),
+                    items: [
+                        intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.0'}),
+                        intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.1'}),
+                        intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.2'}),
+                        intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.3'}),
+                        intl.formatMessage({id: 'portfolio.lymfodrenaz.benefits.4'}),
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'bemer',
+            title: intl.formatMessage({id: 'portfolio.bemer.title'}),
+            description: intl.formatMessage({id: 'portfolio.bemer.description'}),
+            image: '/static/images/bemer.webp',
+            alt: intl.formatMessage({id: 'portfolio.bemer.title'}),
+            details: [
+                {
+                    title: intl.formatMessage({id: 'portfolio.bemer.benefits.title'}),
+                    items: [
+                        intl.formatMessage({id: 'portfolio.bemer.benefits.0'}),
+                        intl.formatMessage({id: 'portfolio.bemer.benefits.1'}),
+                        intl.formatMessage({id: 'portfolio.bemer.benefits.2'}),
+                        intl.formatMessage({id: 'portfolio.bemer.benefits.3'}),
+                        intl.formatMessage({id: 'portfolio.bemer.benefits.4'}),
+                    ],
                 },
             ],
         },

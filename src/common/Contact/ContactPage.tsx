@@ -41,10 +41,11 @@ const ContactPage: React.FC = () => {
     });
 
     const contactInfo = {
+        name: 'Vendula Staňková',
         phone: '+420 606 313 452',
         email: 'salon.fenix.lipno@gmail.com',
         address: 'Přední Výtoň 256',
-        city: '382 78 Přední Výtoň',
+        city: '382 73 Přední Výtoň',
         hours: 'Po - Pá: 10:00 - 17:00',
         additionalHours: 'a dle telefonických objednávek + víkendy',
         coordinates: {
@@ -200,6 +201,24 @@ const ContactPage: React.FC = () => {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">{intl.formatMessage({id: 'contact.contactInfo'})}</h2>
 
                             <div className="space-y-6">
+                                {/* Name */}
+                                <div className="flex items-start">
+                                    <div className="shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h3 className="text-lg font-semibold text-gray-900">{intl.formatMessage({id: 'common.name'})}</h3>
+                                        <p className="text-blue-600 text-lg font-medium">{contactInfo.name}</p>
+                                        <p className="text-gray-600 text-sm mt-1">{intl.formatMessage({id: 'common.name.description'})}</p>
+                                    </div>
+                                </div>
                                 {/* Phone */}
                                 <div className="flex items-start">
                                     <div className="shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
