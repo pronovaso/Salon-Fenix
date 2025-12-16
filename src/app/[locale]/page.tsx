@@ -53,6 +53,17 @@ const HomePage = async ({params}: Props) => {
         additionalHours: locale === 'cs' ? 'a dle telefonických objednávek + víkendy' : 'and by phone appointment + weekends',
     };
 
+    const membershipCertificates = [
+        {
+            href: '/static/documents/certifikat.pdf',
+            title: intl.formatMessage({id: 'certifikat.odborna.staz'}),
+        },
+        {
+            href: '/static/documents/certifikat2.pdf',
+            title: intl.formatMessage({id: 'certifikat.hojeni.ran.staz'}),
+        },
+    ];
+
     return (
         <>
             <Hero locale={locale} />
@@ -84,32 +95,6 @@ const HomePage = async ({params}: Props) => {
                 </div>
             </section>
 
-            {/* <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{intl.formatMessage({id: 'cta.haveQuestions'})}</h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">{intl.formatMessage({id: 'services.description'})}</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                        <div className="text-center p-6 bg-blue-50 rounded-lg">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3">{intl.formatMessage({id: 'services.massage.title'})}</h3>
-                            <p className="text-gray-600">{intl.formatMessage({id: 'services.massage.description'})}</p>
-                        </div>
-
-                        <div className="text-center p-6 bg-blue-50 rounded-lg">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3">{intl.formatMessage({id: 'services.cosmetics.title'})}</h3>
-                            <p className="text-gray-600">{intl.formatMessage({id: 'services.cosmetics.description'})}</p>
-                        </div>
-
-                        <div className="text-center p-6 bg-blue-50 rounded-lg">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3">{intl.formatMessage({id: 'services.pedicure.title'})}</h3>
-                            <p className="text-gray-600">{intl.formatMessage({id: 'services.pedicure.description'})}</p>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
@@ -134,11 +119,29 @@ const HomePage = async ({params}: Props) => {
 
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">{intl.formatMessage({id: 'home.membership.title'})}</h2>
-                        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{intl.formatMessage({id: 'home.membership.description'})}</p>
+                    <div className="flex flex-col items-center gap-6">
+                        <div className="text-center">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">{intl.formatMessage({id: 'home.membership.title'})}</h2>
+                            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{intl.formatMessage({id: 'home.membership.description'})}</p>
+                        </div>
+
                         <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-full">
                             <Image src="/static/images/Logo-ČPS-JPEG-300x300.webp" alt="Logo ČPS" width={300} height={300} className="rounded-full" />
+                        </div>
+
+                        <h3 className="text-xl font-semibold text-gray-900">{intl.formatMessage({id: 'certifikat.ostatni'})}</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+                            {membershipCertificates.map((certificate) => (
+                                <a
+                                    key={certificate.href}
+                                    href={certificate.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex flex-col items-center gap-2 rounded-lg border border-blue-100 bg-blue-50 px-4 py-3 text-center shadow-sm transition-transform hover:-translate-y-1 hover:shadow-md"
+                                >
+                                    <span className="text-sm font-semibold text-blue-700">{certificate.title}</span>
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
