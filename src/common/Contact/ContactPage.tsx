@@ -299,6 +299,43 @@ const ContactPage: React.FC = () => {
                                         <p className="text-gray-600 text-sm mt-1">{intl.formatMessage({id: 'contact.weekendAppointments'})}</p>
                                     </div>
                                 </div>
+
+                                {/* Social media */}
+                                <div className="flex items-start">
+                                    <div className="shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.8L3 21l1.8-5A7.8 7.8 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div className="ml-4">
+                                        <h3 className="text-lg font-semibold text-gray-900">{intl.formatMessage({id: 'contact.socials'})}</h3>
+                                        <div className="mt-2 flex flex-wrap gap-4">
+                                            <a
+                                                href="https://www.facebook.com/salonfenixlipno?mibextid=wwXIfr&rdid=JZkWOhhJCSX391iG&share_url=https://www.facebook.com/share/19pH4BTMXB/?mibextid%3DwwXIfr%26ref%3D1"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={intl.formatMessage({id: 'contact.facebook'})}
+                                                className="text-blue-600 hover:text-blue-800 font-medium"
+                                            >
+                                                {intl.formatMessage({id: 'contact.facebook'})}
+                                            </a>
+                                            <a
+                                                href="https://www.instagram.com/fenixlipno"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={intl.formatMessage({id: 'contact.instagram'})}
+                                                className="text-pink-600 hover:text-pink-700 font-medium"
+                                            >
+                                                {intl.formatMessage({id: 'contact.instagram'})}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
