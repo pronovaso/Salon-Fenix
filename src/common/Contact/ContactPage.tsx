@@ -420,7 +420,7 @@ const ContactPage: React.FC = () => {
                                                 titleKey = 'sluzby.masaz.klasicka';
                                             }
                                             return (
-                                                <option key={service.id} value={service.id}>
+                                                <option key={service.id} value={service.description}>
                                                     {intl.formatMessage({id: titleKey})}
                                                 </option>
                                             );

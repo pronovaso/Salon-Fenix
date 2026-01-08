@@ -5,6 +5,7 @@ export type Service = {
     image: string;
     price: string;
     index: boolean;
+    description: string;
 };
 
 export const getServices = (): Service[] => {

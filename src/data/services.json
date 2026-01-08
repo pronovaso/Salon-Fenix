@@ -1,54 +1,63 @@
 [
   {
     "id": "instrumentalPedicure",
+    "description": "Přístrojová pedikúra",
     "image": "/static/images/Pristrojova_pedikura.webp",
     "price": "630 Kč",
     "index": true
   },
   {
     "id": "kartPedikura",
+    "description": "Klasická pedikúra",
     "image": "/static/images/Kart.webp",
     "price": "1500 Kč",
     "index": false
   },
   {
     "id": "maderotherapy",
+    "description": "Maderoterapie",
     "image": "/static/images/Maderoterapie.webp",
     "price": "1100 Kč",
     "index": false
   },
   {
     "id": "cosmeticTreatment",
+    "description": "Základní ošetření pleti",
     "image": "/static/images/Zakladni_osetreni.webp",
     "price": "1390 Kč",
     "index": true
   },
   {
     "id": "manicureShellac",
+    "description": "Manikúra se shellacem",
     "image": "/static/images/Shellac.webp",
     "price": "640 Kč",
     "index": false
   },
   {
     "id": "klasickaMasaz",
+    "description": "Klasická masáž",
     "image": "/static/images/Relax.webp",
     "price": "1000 Kč",
     "index": true
   },
   {
     "id": "solarium",
+    "description": "Solárium",
     "image": "/static/images/salon_9.webp",
     "price": "od 19 Kč",
     "index": true
   },
   {
     "id": "lymfodrenaz",
+    "description": "Lymfodrenáž",
     "image": "/static/images/lymfodrenaz.webp",
     "price": "od 300 Kč",
     "index": true
   },
   {
     "id": "bemer",
+    "description": "Bemer terapie",
     "image": "/static/images/bemer.webp",
     "price": "od 150 Kč",
     "index": true
